@@ -12,22 +12,19 @@
     font-family: bebas;
     src: url(./fonts/BebasNeue-Regular.ttf);
 }
-        body {
-           
-            color: #333;
-        }
 
         /* Header */
         header {
            width: 100%;
            display: flex;
                background-color: #fff9f4;
-
-           
            align-items: center;
            justify-content: space-between;
            padding: 20px 86px;
-          
+          position: fixed;
+          top: 0;
+          z-index: 1000;
+              box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
         }
 
         .logo {
@@ -100,34 +97,11 @@
             width: 50%;
         }
 
-        /* .hero-circle {
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(135deg, #ff8a65 0%, #ff6b35 100%);
-            border-radius: 50%;
-            position: relative;
-        } */
-
-        .hero-circle::before {
-            /* content: ''; */
-            /* position: absolute;
-            bottom: -20px;
-            left: -30px;
-            width: 80px; */
-            height: 80px;
-            /* background: radial-gradient(circle, #ddd 2px, transparent 2px);
-            background-size: 8px 8px; */
-        }
 
         .shoe-image {
-            /* position: absolute;
-            top: 10%;
-            left: 20%; */
-            /* transform: translate(-50%, -50%) rotate(-25deg); */
             width: 100%;
-    
             height: auto;
-            /* max-width: 90%; */
+
         }
 
         .shoe-image img {
@@ -175,90 +149,7 @@
             gap: 8px;
         }
 
-        /* .hero {
-            display: flex;
-            gap: 95px;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 50px;  
-            background-color: #fdf8f2;
-            
-        }
-
-        .hero-image {
-           width: 40%;
-        }
-
-        .hero-circle {
-          
-        }
-
-        .hero-circle{
-            
-           
-           
-           
-        }
-
-        .shoe-image {
-           width: 100%;
-            
-           
-        }
-
-        .shoe-image img {
-            width: 100%;
-            
-        }
-
-        .hero-content {
-           
-            display: flex;
-            flex-direction: column;
-            gap: 9px;
-            width: 40%;
-           
-        }
-
-        .hero-content h1 {
-            font-size: 74px;
-            color: #ff6b35;
-            font-weight: bold;
-           font-family: bebas;
-        }
-
-        .hero-content h2 {
-            font-size: 74px;
-            color: #2c3e50;
-            font-weight: bold;
-           font-family: bebas;
-        }
-
-        .hero-content p {
-            color: #666;
-            font-size: 14px;
-            font-weight: 400;
-             font-family: roboto;
-            line-height: 1.6;
-        }
-
-        .btn-primary {
-            background-color: #4169e1;
-            color: white;
-            width: 49%;
-            padding: 12px 8px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            
-            align-items: center;
-            gap: 8px;
-        } */
-
-        
-
+    
         .btn-primary:hover {
             background-color: #3151b7;
         }
@@ -288,8 +179,6 @@
             padding: 20px;
             flex: 1;
             width: 20%;
-            /* min-width: 280px;
-            max-width: 32%; */
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -351,11 +240,6 @@
             gap: 6px;
         }
 
-        /* .btn-secondary::before {
-            content: '🛒';
-            filter: brightness(0) invert(1);
-        } */
-
         /* Features Section */
         .features {
             display: flex;
@@ -366,7 +250,6 @@
         }
 
         .features-left {
-            /* flex: 1; */
             width: 34%;
             display: flex;
             flex-direction: column;
@@ -380,7 +263,6 @@
             width: 100%;
             display: flex;
             gap: 25px;
-            /* align-items: flex-start; */
         }
 
         .feature-icon {
@@ -521,7 +403,9 @@
         }
 
         /* Tablet devices (768px and below) */
+
         @media (max-width: 768px) {
+
             /* Header adjustments */
              header {
                
@@ -593,26 +477,6 @@
             }
           
 
-            /* .shoe-image {
-                width: 320px;
-            }
-
-            .hero-content {
-                order: 2;
-                padding-left: 0;
-            }
-
-            .hero-content h1 {
-                font-size: 32px;
-            }
-
-            .hero-content h2 {
-                font-size: 28px;
-            }
-
-            .hero-content p {
-                font-size: 14px;
-            } */
 
             /* Sections */
             .section {
@@ -642,9 +506,7 @@
             .product-description{
                 font-size: 16px;
             }
-                /* .product-image img {
-                height: 540px;
-            } */
+
             /* Features */
             .features {
                 padding: 40px 20px;
@@ -671,12 +533,10 @@
             /* Newsletter */
             .newsletter {
                 padding: 30px 20px;
-                /* margin: 30px 20px; */
             }
 
             .newsletter h3 {
                 font-size: 20px;
-                /* margin-bottom: 20px; */
             }
 
             .newsletter-form {
@@ -717,6 +577,7 @@
         }
 
         /* Small mobile devices (480px and below) */
+
         @media (max-width: 480px) {
             header {
                
@@ -758,17 +619,6 @@
                 padding: 120px 15px 30px;
             }
 
-            /* .hero-circle {
-                width: 240px;
-                height: 240px;
-            }
-
-            .hero-circle::before {
-                width: 60px;
-                height: 60px;
-                bottom: -15px;
-                left: -20px;
-            } */
              .hero .hero-image{
                 width: 70%;
                 display: flex;
@@ -794,58 +644,7 @@
                 padding: 10px 20px;
                 font-size: 13px;
             }
-            /* .hero {
-                padding: 30px 20px;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            } */
-
-           
-
-            /* .hero-circle::before {
-                width: 60px;
-                height: 60px;
-                bottom: -15px;
-                left: -20px;
-            } */
-            /* .hero-image{
-                width: 50%;
-            }
-            
-            .shoe-image {
-                width: 50%;
-            }
-            .shoe-image img {
-                width: 100%;
-            }
-
-             .hero-content{
-                width: 60%;
-             }
-
-            .hero-content h1 {
-                
-          font-size: 34px;
-            }
-
-            .hero-content h2 {
-                font-size: 34px;
-             
-            }
-
-            .hero-content p {
-                font-size: 13px;
-               
-            }
-
-            .btn-primary {
-                padding: 10px 20px;
-                font-size: 13px;
-            } */
-
+         
             .section {
                 padding: 30px 15px;
             }
